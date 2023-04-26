@@ -9,15 +9,39 @@ body{
 }
 .menu_icon{
     display: flex;
+    align-items: center;
 }
 .menu_icon i{
     color: #ccc;
     width: 27px;
     text-align: center;
-    align-items: center;
 }
 .menu_icon i:nth-child(2){
     background-color: #88c442 !important;
+    height: 46px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.menu_contact{
+    display: flex;
+    font-size: 12px;
+    line-height: 24px;
+    color: #a3d865;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    margin-left: 24px;
+}
+.menu_contact .contact_2{
+    color: #fff;
+    margin-left: 5px;
+}
+.menu_user{
+    display: flex;
+    float: right;
 }
 .menu_user img{
     width: 50px;
