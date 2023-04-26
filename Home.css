@@ -1,0 +1,19 @@
+#social_menu{
+    width: 1605px;
+    height: 43px;
+    background-color: #5a4a3b;
+    display: flex;
+}
+.menu_icon i{
+    color: #ccc;
+    width: 27px;
+    height: 46px;
+    text-align: center;
+}
+.menu_icon i:nth-child(2){
+    background-color: #88c442 !important;
+}
+.menu_user img{
+    width: 50px;
+    height: auto;
+}
