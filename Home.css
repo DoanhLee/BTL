@@ -306,6 +306,36 @@ body{
     height: 285px;
     margin-top: 20px;
 }
+.new_product .product_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .new_product .product_name p{
+    max-width: 250px;
+    font-weight: bold;
+    font-size: 17px;
     text-align: center;
+}
+.buy_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.buy_btn .buy_button{
+    border-radius: 50px;
+    border: 2px solid #a3d865;
+    color: #88c442;
+    width: 140px;
+    height: 40px;
+    background-color: #fff;
+
+}
+.buy_btn i{
+    color: #88c442;
+    font-size: 24px;
+    position: absolute;
+    left: 62px;
 }
