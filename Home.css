@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
 }
 /* CSS thanh socical */
 #social_menu{
@@ -146,7 +146,7 @@ body{
 .nav_header ul li a{
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 16px;
 }
 .nav_header ul li{
     margin-right: 40px;
@@ -245,7 +245,7 @@ body{
     width: 1236px;
     margin: 0 auto;
 }
-.green_block{
+#main_screen_2 .green_block{
     background-color: #88c442;
     width: 400px;
     height: 285px;
@@ -259,7 +259,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.fresh_fruit P{
+.fresh_fruit p{
     font-size: 30px;
     margin-bottom: 12px;
 }
@@ -275,8 +275,37 @@ body{
     font-size: 12px;
 }
 /* CSS main 3 */
+#main_screen_3{
+    width: 1236px;
+    margin: 0 auto;
+}
 #main_screen_3 .new_arrival{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.new_arrival .new_arrival_content{
+    display: flex;
+    color: #000000;
+    font-size: 60px;
+    position: absolute;
+    top: 4px;
+}
+.new_arrival_content p:first-child{
+    color: #88c442 !important;
+    margin-right: 16px;
+}
+.new_products{
+    display: flex;
+    justify-content: space-around;
+}
+.new_products .green_block{
+    background-color: #88c442;
+    width: 280px;
+    height: 285px;
+    margin-top: 20px;
+}
+.new_product .product_name p{
+    text-align: center;
 }
