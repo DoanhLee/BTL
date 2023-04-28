@@ -1,11 +1,14 @@
 body{
     margin: 0;
+
 }
+/* CSS thanh socical */
 #social_menu{
     width: 100%;
     height: 43px;
     background-color: #5a4a3b;
     display: flex;
+    justify-content: space-between;
 }
 .menu_icon{
     display: flex;
@@ -41,9 +44,217 @@ body{
 }
 .menu_user{
     display: flex;
-    float: right;
+    font-size: 12px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
 }
 .menu_user img{
-    width: 50px;
+    width: 20px;
+    height: 10px;
+}
+.menu_user .menu_img{
+    width: auto;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.menu_user i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_user p{
+    margin-right: 10px;
+}
+.menu_user p:nth-child(4){
+    margin-left: 20px;
+}
+.menu_account{
+    display: flex;
+    width: 136px;
+    height: 46px;
+    background-color: #88c442;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menu_account p{
+    margin-left: 10px;
+}
+/* CSS nognic */
+#nognic_header{
+    width: 1236px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#nognic_header .left_header{
+    margin-top: 60px;
+}
+.left_header .heart_icon{
+    background-color: #88c442;
+    border: 0.1875em solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 36px;
+}
+#nognic_header .main_header{
+    margin-top: 40px;
+}
+#nognic_header .logo_image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_image .logo_name{
+    color: #88c442;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+
+}
+#nognic_header .nav_header ul{ 
+    display: flex;
+    list-style: none;
+}
+.nav_header ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.nav_header ul li{
+    margin-right: 40px;
+}
+.nav_header ul li:first-child a{
+    color: #88c442 !important;
+}
+#nognic_header .right_header{
+    margin-top: 60px;
+    display: flex;
+}
+.right_header .search_icon,
+.right_header .bag_icon{
+    background-color: #88c442;
+    border: 0.1875em solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+}
+.right_header .bag_icon{
+    margin-right: 36px;
+}
+/* CSS Main */
+#main_screen{
+    background-color: #000;
+    width: 100%;
+    height: 670px;
+    display: flex;
+    justify-content: space-between;
+}
+.left_arrow .arrowl_icon{
+    background-color: #88c442;
+    border: 0.1875em solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    border: 3px solid #fff;
+}
+.right_arrow .arrowr_icon{
+    background-color: #7d7d7d;
+    border: 0.1875em solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    border: 3px solid #fff;
+}
+.left_arrow, .right_arrow{
+    margin: 310px 40px 0 40px;
+}
+.screen_content .content_1{
+    font-size: 40px;
+    width: 600pxs;
+    text-align: center;
+    margin-top: 220px;
+}
+.screen_content .content_1,
+.screen_content .content_2{
+    color: #88c442;
+}
+.screen_content .content_2 p:first-child{
+    color: #fff !important;
+    margin-right: 20px;
+}
+.screen_content .content_2 p{
+    margin: 0;
+}
+.screen_content .content_2{
+    display: flex;
+    font-size: 140px;
+}
+.screen_content .content_3{
+    color: #ccc;
+    text-align: center;
+    font-size: 28px;
+}
+#main_screen_2{
+    display: flex;
+    justify-content: space-between;
+    width: 1236px;
+    margin: 0 auto;
+}
+#main_screen_2 .green_block{
+    background-color: #88c442;
+    width: 400px;
+    height: 285px;
+    margin-top: -90px;
+}
+.fruit_img{
+    margin-bottom: 105px;
+}
+.fresh_fruit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fresh_fruit P{
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+.fresh_fruit p:first-child{
+    color: #88c442;
+    margin-right: 12px;
+}
+.view{
+    text-align: center;
+}
+.view a{
+    color: #000;
+    font-size: 12px;
 }
