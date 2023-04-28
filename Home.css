@@ -1,6 +1,6 @@
 body{
     margin: 0;
-
+    font-family: "Montserrat";
 }
 /* CSS thanh socical */
 #social_menu{
@@ -108,6 +108,20 @@ body{
     color: #fff;
     font-size: 25px;
     margin-left: 36px;
+    position: relative;
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #5a4a3b;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 #nognic_header .main_header{
     margin-top: 40px;
@@ -159,6 +173,7 @@ body{
 }
 .right_header .bag_icon{
     margin-right: 36px;
+    position: relative;
 }
 /* CSS Main */
 #main_screen{
@@ -223,13 +238,14 @@ body{
     text-align: center;
     font-size: 28px;
 }
+/* CSS main 2 */
 #main_screen_2{
     display: flex;
     justify-content: space-between;
     width: 1236px;
     margin: 0 auto;
 }
-#main_screen_2 .green_block{
+.green_block{
     background-color: #88c442;
     width: 400px;
     height: 285px;
@@ -257,4 +273,10 @@ body{
 .view a{
     color: #000;
     font-size: 12px;
+}
+/* CSS main 3 */
+#main_screen_3 .new_arrival{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
