@@ -183,31 +183,24 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.right_arrow .arrowr_icon,
 .left_arrow .arrowl_icon{
     background-color: #88c442;
     border: 0.1875em solid #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     font-size: 25px;
     border: 3px solid #fff;
+    cursor: pointer;
 }
 .right_arrow .arrowr_icon{
     background-color: #7d7d7d;
-    border: 0.1875em solid #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 25px;
-    border: 3px solid #fff;
+
 }
 .left_arrow, .right_arrow{
     margin: 310px 40px 0 40px;
@@ -276,8 +269,8 @@ body{
 }
 /* CSS main 3 */
 #main_screen_3{
-    width: 1236px;
     margin: 0 auto;
+    width: 1400px;
 }
 #main_screen_3 .new_arrival{
     display: flex;
@@ -296,15 +289,51 @@ body{
     color: #88c442 !important;
     margin-right: 16px;
 }
+.list_new_products{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.sqr_arrowl,
+.sqr_arrowr{
+    background-color: #88c442;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 .new_products{
     display: flex;
     justify-content: space-around;
+    width: 1236px;
 }
 .new_products .green_block{
     background-color: #88c442;
     width: 280px;
     height: 285px;
-    margin-top: 20px;
+    margin-top: 100px;
+    position: relative;
+}
+.green_block .new_cir,
+.green_block .sale_cir{
+    border-radius: 50px;
+    color: #fff;
+    background-color: rgb(207, 74, 118);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -24px;
+    right: 24px;
+}
+.green_block .new_cir{
+    background-color: orangered;
 }
 .new_product .product_name{
     display: flex;
@@ -316,6 +345,18 @@ body{
     font-weight: bold;
     font-size: 17px;
     text-align: center;
+}
+.product_price{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.product_price p:first-child{
+    font-size: 32px;
+    margin-right: 8px;
+}
+.product_price p:nth-child(2){
+    color: red;
 }
 .buy_btn{
     display: flex;
@@ -334,8 +375,31 @@ body{
 
 }
 .buy_btn i{
-    color: #88c442;
+    color: #aae467;
     font-size: 24px;
     position: absolute;
     left: 62px;
+    background-color: #fff;
+}
+/* CSS main 4 */
+#main_screen_4{
+    margin: 0 auto;
+    width: 1236px;
+}
+#main_screen_4 .deal_day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.deal_day .deal_content{
+    display: flex;
+    color: #000000;
+    font-size: 60px;
+    position: absolute;
+    top: 4px;
+}
+.deal_content p:first-child{
+    color: #88c442 !important;
+    margin-right: 16px;
 }
