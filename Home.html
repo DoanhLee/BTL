@@ -287,7 +287,7 @@
 <div class="mc4_content">
   <div class="mc4_left">
 
-      <div class="mc4_twin_content">
+      <!-- <div class="mc4_twin_content">
         <div class="green_block"></div>
         <div class="jessica_fruit">
           <h4>Jessica Simpson Fruit's</h4>
@@ -351,7 +351,7 @@
             <i class="fas fa-shopping-basket"></i>
           </div>
         </div>
-      </div>
+      </div> -->
 
   </div>  
 
@@ -379,7 +379,7 @@
 
   <div class="mc4_right">
 
-      <div class="mc4_twin_content">
+      <!-- <div class="mc4_twin_content">
         <div class="green_block"></div>
         <div class="jessica_fruit">
           <h4>Jessica Simpson Fruit's</h4>
@@ -443,7 +443,7 @@
             <i class="fas fa-shopping-basket"></i>
           </div>
         </div>
-      </div>
+      </div> -->
 
   </div>
 </div>
@@ -615,9 +615,11 @@
       // }
     ];
 
+    localStorage.setItem("products", JSON.stringify(data));
+
     let products = JSON.parse(localStorage.getItem('products'));
     let html = '';
-    console.log(product.length);
+    console.log(products.length);
 
     for (let i = 0; i < products.length; i++){
       html += `
@@ -642,6 +644,66 @@
     }
     document.querySelector(".new_products").innerHTML = html;
     }
+    function deal() {
+      let data2 = [
+      {
+        productId:"p101",
+        productName: "Jessica Simpson Fruit's",
+        catologId:"C1",
+        price: 23.00,
+        status: "normal",
+      },
+      {
+        productId:"p102",
+        productName: "Jack Fruit's",
+        catologId:"C2",
+        price: 23.00,
+        status:"normal"
+      },
+      {
+        productId:"p103",
+        productName: "Kensie coconut",
+        catologId:"C3",
+        price: 25.00,
+        status:"normal",
+      },
+    ];
+
+    localStorage.setItem("products2", JSON.stringify[data2]);
+    let products = JSON.parse(localStorage.getItem('products2'));
+    let html2 = '';
+    console.log(products2.length);
+
+    
+    for (let i = 0; i < products.length; i++){
+      html2 += `
+      <div class="mc4_twin_content">
+        <div class="green_block"></div>
+        <div class="jessica_fruit">
+          <h4>${products2[i].productName}</h4>
+          <div class="star_point">
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          </div>
+          <div class="product_price2">
+            <p>$${products2[i].price}</p>
+            <p><del>$12.00</del></p>
+          </div>
+          <div class="buy_btn2">
+            <button class="buy_button">BUY NOW</button>
+            <i class="fas fa-shopping-basket"></i>
+          </div>
+        </div>
+      </div>
+      `
+    }
+    document.querySelector(".mc4_left").innerHTML = html2;
+    document.querySelector(".mc4_right").innerHTML = html2;
+    }
     window.onload = init;
+    window.onload = deal;
   </script>
 </html>
