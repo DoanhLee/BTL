@@ -177,7 +177,7 @@
 
      <div class="new_products">
 
-      <div class="new_product">
+      <!-- <div class="new_product">
         <div class="green_block"></div>
 
         <div class="product_name">
@@ -255,7 +255,7 @@
           <button class="buy_button">BUY NOW</button>
           <i class="fas fa-shopping-basket"></i>
         </div>
-      </div>
+      </div> -->
 
      </div>
 
@@ -540,4 +540,108 @@
 </div>
   </main>
   </body>
+  <script>
+    function init(){
+      let data = [
+      {
+        productId:"p101",
+        productName: "Jessica Simpson Fruit's",
+        catologId:"C1",
+        price: 23.00,
+        status: "normal",
+      },
+      {
+        productId:"p102",
+        productName: "Jack Fruit's",
+        catologId:"C2",
+        price: 23.00,
+        status:"normal"
+      },
+      {
+        productId:"p103",
+        productName: "Kensie coconut",
+        catologId:"C3",
+        price: 25.00,
+        status:"normal",
+      },
+      {
+        productId:"p104",
+        productName: "Jessica Simpson Vegetable's",
+        catologId:'C4',
+        price: 20.00,
+        status:'normal'
+      },
+      // {
+      //   productId:'p105',
+      //   productName: "Jessica Simpson Meet's",
+      //   catologId:'C5',
+      //   price: 30.00,
+      //   status:'normal'
+      // },
+      // {
+      //   productId:'p106',
+      //   productName: 'Organic Food',
+      //   catologId:'C3',
+      //   price: 23.00,
+      //   status:'normal'
+      // },
+      // {
+      //   productId:'p107',
+      //   productName: 'Raddish Chits',
+      //   catologId:'C7',
+      //   price: 23.00,
+      //   status:'normal'
+      // },
+      // {
+      //   productId:'p108',
+      //   productName: "Original Penguin Vegetable's",
+      //   catologId:'C4',
+      //   price: 33.00,
+      //   status:'sale'
+      // },
+      // {
+      //   productId:'p109',
+      //   productName: "Lee Uniforms Vegetable's",
+      //   catologId:'C9',
+      //   price: 28.00,
+      //   status:'normal'
+      // },
+      // {
+      //   productId:'p110',
+      //   productName: 'Jessica Simpson Cucumber',
+      //   catologId:'C8',
+      //   price: 23.00,
+      //   status:'new'
+      // }
+    ];
+
+    let products = JSON.parse(localStorage.getItem('products'));
+    let html = '';
+    console.log(product.length);
+
+    for (let i = 0; i < products.length; i++){
+      html += `
+      <div class="new_product">
+        <div class="green_block"></div>
+
+        <div class="product_name">
+          <p>${products[i].productName}</p>
+        </div>
+
+        <div class="product_price">
+          <p>$${products[i].price}</p>
+          <p><del>$12.00</del></p>
+        </div>
+
+        <div class="buy_btn">
+          <button class="buy_button">BUY NOW</button>
+          <i class="fas fa-shopping-basket"></i>
+        </div>
+      </div>
+      `
+    }
+    document.querySelector(".new_products").innerHTML = html;
+    }
+    window.onload = init;
+  </script>
 </html>
