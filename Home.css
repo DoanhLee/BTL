@@ -270,7 +270,7 @@ body{
 /* CSS main 3 */
 #main_screen_3{
     margin: 0 auto;
-    width: 1400px;
+    width: 1236px;
 }
 #main_screen_3 .new_arrival{
     display: flex;
@@ -310,6 +310,11 @@ body{
     display: flex;
     justify-content: space-around;
     width: 1236px;
+    margin-bottom: 120px;
+}
+.new_product{
+    border: 1px solid #bdadad;
+    height: 650px;
 }
 .new_products .green_block{
     background-color: #88c442;
@@ -384,13 +389,16 @@ body{
 /* CSS main 4 */
 #main_screen_4{
     margin: 0 auto;
-    width: 1236px;
 }
 #main_screen_4 .deal_day{
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #000;
+    width: 1100px;
 }
 .deal_day .deal_content{
     display: flex;
@@ -398,8 +406,281 @@ body{
     font-size: 60px;
     position: absolute;
     top: 4px;
+
 }
 .deal_content p:first-child{
     color: #88c442 !important;
     margin-right: 16px;
+}
+.product_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+    width: 1100px;
+}
+.product_menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.product_menu ul li{
+    margin: 16px 10px 0px 10px;
+    text-align: center;
+}
+#main_screen_4 .mc4_content{
+    display: flex;
+    justify-content: space-between;
+    width: 1236px;
+    margin: 30px auto;
+}
+#main_screen_4 .mc4_twin_content{
+    border-bottom: 1px solid #000;
+    width: 400px;
+    margin-bottom: 40px;
+}
+#main_screen_4 .mc4_twin_content{
+    display: flex;
+    padding-bottom: 40px;
+}
+#main_screen_4 .green_block{
+    background-color: #88c442;
+    width: 160px;
+    height: 130px;
+}
+.jessica_fruit{
+    margin-left: 20px;
+}
+.jessica_fruit h4{
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+.product_price2{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+.product_price2 p:first-child{
+    font-size: 20px;
+    margin-right: 8px;
+    margin-top: 0;
+}
+.product_price2 p:nth-child(2){
+    color: red;
+}
+.buy_btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.buy_btn2 .buy_button{
+    border-radius: 50px;
+    border: 2px solid #a3d865;
+    color: #88c442;
+    width: 140px;
+    height: 40px;
+    background-color: #fff;
+}
+.buy_btn2 i{
+    color: #aae467;
+    font-size: 24px;
+    position: absolute;
+    left: 14px;
+    background-color: #fff;
+}
+#main_screen_4 .mc4_center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+}
+.mc4_center .green_block{
+    width: 210px !important;
+    height: 140px !important;
+}
+.mc4_center{
+    text-align: center;
+}
+.mc4_center .kensie_fruit h4{
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+.mc4_center .product_price2{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.mc4_center .product_price2 p:first-child{
+    font-size: 28px;
+}
+.mc4_center .buy_btn2 i{
+    left: 80px;
+}
+.star_point i:first-child,
+.star_point i:nth-child(2),
+.star_point i:nth-child(3){
+    color: #88c442;
+}
+/* CSS main 5 */
+#main_screen_5{
+    width: 1236px;
+    margin: 0px auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#main_screen_5 .mc5_left,
+#main_screen_5 .mc5_right{
+    background-color: #7d7d7d;
+}
+#main_screen_5 .mc5_left{
+    width: 865px;
+    height: 416px;
+}
+.mc5_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mc5_left .mc5_left_content{
+    display: flex;
+}
+.mc5_left_content h2{
+    font-size: 84px;
+    color: #d2ef89;
+    margin-bottom: 20px;
+}
+.mc5_left_content h2:first-child{
+    color: #70c15c;
+    margin-right: 40px;
+}
+.mc5_left .shop_button{
+    color: #bcda71;
+    border: 6px solid #bcda71;
+    background-color: #7d7d7d;
+    width: 248px;
+    height: 48px;
+}
+#main_screen_5 .mc5_right{
+    width: 350px;
+}
+.mc5_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.mc5_right_content{
+    color: #fff;
+}
+.mc5_right_content h3{
+    margin: 0;
+    font-size: 36px;
+}
+.mc5_right_content p{
+    margin: 0;
+    font-size: 22px;
+}
+.mc5_right .shop_button{
+    margin: 28px auto;
+    width: 146px;
+    height: 32px;
+    color: #000;
+    background-color: #bcda71;
+}
+/* CSS main 6 */
+#main_screen_6{
+    margin: 0 auto;
+    width: 100%;
+}
+#main_screen_6 .organic_news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.organic_news .organic_news_content{
+    display: flex;
+    color: #000000;
+    font-size: 60px;
+    position: absolute;
+    top: 4px;
+}
+.organic_news_content p:first-child{
+    color: #88c442 !important;
+    margin-right: 16px;
+}
+#main_screen_6 .mc6_content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+    margin-bottom: 160px;
+}
+.mc6_content .mc6_content_main{
+    margin: 0 4px;
+    height: 284px;
+    width: 25%;
+    background-color: #7d7d7d;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+.mc6_content .mc6_content_main:nth-child(2){
+    background-color: #70c15c;
+}
+.mc6_content_main p:first-child{
+    color: #ccdf9b;
+    margin: 0;
+    font-size: small;
+}
+.mc6_content_main p{
+    color: #fff;
+    font-size: 16px;
+    width: 260px;
+}
+/* CSS main 7 */
+#main_screen_7{
+    margin: 0 auto;
+    width: 100%;
+}
+#main_screen_7 .delivery_process{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.delivery_process .delivery_process_content{
+    display: flex;
+    color: #000000;
+    font-size: 60px;
+    position: absolute;
+    top: 4px;
+}
+.delivery_process_content p:first-child{
+    color: #88c442 !important;
+    margin-right: 16px;
+}
+#main_screen_7 .step_icons{
+    display: flex;
+    margin: 40px auto;
+    width: 970px;
+    justify-content: space-between;
+    align-items: center;
+}
+.step_icons .step_icon{
+    border-radius: 50px;
+    background-color: #aae467;
+    width: 108px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #fff;
 }
