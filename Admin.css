@@ -37,3 +37,21 @@ table th, table td{
     background-color: rgb(87, 243, 191);
     color: #f73838;
 }
+.pen_btn{
+    cursor: pointer;
+}
+.pen_btn:hover{
+    color: red;
+}
+.form{
+    width: 280px;
+    background-color: aqua;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form .option{
+    padding-bottom: 20px;
+}
