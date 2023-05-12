@@ -3,6 +3,7 @@ table, th, td {
   }
 table{
     font-size: 30px;
+    margin: 0 auto;
 }
 table th, table td{
     padding: 8px;
@@ -13,7 +14,7 @@ table th, table td{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 .add_product .plus_icon{
     width: 60px;
