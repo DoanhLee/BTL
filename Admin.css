@@ -1,0 +1,27 @@
+table, th, td {
+    border: 1px solid black;
+  }
+table{
+    font-size: 30px;
+}
+table th, table td{
+    padding: 8px;
+    text-align: center;
+}
+.add_product{
+    width: 866px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.add_product .plus_icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
