@@ -16,7 +16,7 @@ table th, table td{
     align-items: center;
     margin: 20px auto;
 }
-.add_product .plus_icon{
+.add_product #plus_icon{
     width: 60px;
     height: 60px;
     border-radius: 50px;
@@ -25,4 +25,15 @@ table th, table td{
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    cursor: pointer;
+}
+.delete_btn{
+    cursor: pointer;
+}
+.delete_btn:hover{
+    color: red;
+}
+#plus_icon:hover{
+    background-color: rgb(87, 243, 191);
+    color: #f73838;
 }

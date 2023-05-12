@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=>, initial-scale=1.0" />
-    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -36,6 +35,11 @@
             <i class="fas fa-trash"></i>
           </div>
         </td>
+        <td>
+          <div class="pen_btn">
+            <i class="fas fa-pen"></i>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>P002</td>
@@ -46,6 +50,11 @@
         <td>
           <div class="delete_btn">
             <i class="fas fa-trash"></i>
+          </div>
+        </td>
+        <td>
+          <div class="pen_btn">
+            <i class="fas fa-pen"></i>
           </div>
         </td>
       </tr>
@@ -60,13 +69,49 @@
             <i class="fas fa-trash"></i>
           </div>
         </td>
+        <td>
+          <div class="pen_btn">
+            <i class="fas fa-pen"></i>
+          </div>
+        </td>
       </tr>
     </table>
 
     <div class="add_product">
-      <div class="plus_icon">
+      <div id="plus_icon">
         <i class="fas fa-plus"></i>
       </div>
     </div>
   </body>
+  <script>
+    let delete_btns = document.querySelectorAll(".delete_btn");
+    for (let i = 0; i < delete_btns.length; i++) {
+      let delete_btn = delete_btns[i];
+      delete_btn.onclick = function () {
+        delete_btn.parentElement.parentElement.remove();
+      };
+    }
+    let plus_icon = document.getElementById("plus_icon");
+    plus_icon.onclick = function () {
+      let new_row = document.createElement("tr");
+      new_row.innerHTML = ` 
+      <tr>
+        <td>P001</td>
+        <td>Jessica Simpson Fruit's</td>
+        <td>C1</td>
+        <td>$23</td>
+        <td>Sale</td>
+        <td>
+          <div class="delete_btn">
+            <i class="fas fa-trash"></i>
+          </div>
+        </td>
+      </tr>
+      `;
+      new_row.querySelector(".delete_btn").onclick = function () {
+        new_row.remove();
+      };
+      document.querySelector("table tbody").appendChild(new_row);
+    };
+  </script>
 </html>
