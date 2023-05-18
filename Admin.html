@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -16,11 +16,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="form">
-      <p>Bạn có chắc chắn muốn xóa</p>
+    <div class="form hidden">
+      <p>Bạn có chắc chắn muốn xóa?</p>
       <div class="option">
-        <button>Có</button>
-        <button>Không</button>
+        <button id="yes_btn" class="option_btn">Có</button>
+        <button id="no_btn" class="option_btn">Không</button>
       </div>
     </div>
     <table>
@@ -32,53 +32,36 @@
         <th>Status</th>
       </tr>
       <tr>
-        <td>P001</td>
-        <td>Jessica Simpson Fruit's</td>
-        <td>C1</td>
-        <td>$23</td>
-        <td>Sale</td>
+        <td>
+          <span>P001</span>
+          <input type="text" style="display: none" />
+        </td>
+        <td>
+          <span>Jessica Simpson Fruit's</span>
+          <input type="text" style="display: none" />
+        </td>
+        <td>
+          <span>C1</span>
+          <input type="text" style="display: none" />
+        </td>
+        <td>
+          <span>$23</span>
+          <input type="text" style="display: none" />
+        </td>
+        <td>
+          <span>Sale</span>
+          <input type="text" style="display: none" />
+        </td>
         <td>
           <div class="delete_btn">
             <i class="fas fa-trash"></i>
+            <i class="fas fa-times" style="display: none"></i>
           </div>
         </td>
         <td>
           <div class="pen_btn">
             <i class="fas fa-pen"></i>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>P002</td>
-        <td>Kensie Coconut</td>
-        <td>C2</td>
-        <td>$25</td>
-        <td>Sale</td>
-        <td>
-          <div class="delete_btn">
-            <i class="fas fa-trash"></i>
-          </div>
-        </td>
-        <td>
-          <div class="pen_btn">
-            <i class="fas fa-pen"></i>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>P003</td>
-        <td>Lee Uniforms Vegetable's</td>
-        <td>C3</td>
-        <td>$28</td>
-        <td>Sale</td>
-        <td>
-          <div class="delete_btn">
-            <i class="fas fa-trash"></i>
-          </div>
-        </td>
-        <td>
-          <div class="pen_btn">
-            <i class="fas fa-pen"></i>
+            <i class="fas fa-check" style="display: none"></i>
           </div>
         </td>
       </tr>
@@ -91,13 +74,59 @@
     </div>
   </body>
   <script>
-    let delete_btns = document.querySelectorAll(".delete_btn");
-    for (let i = 0; i < delete_btns.length; i++) {
-      let delete_btn = delete_btns[i];
-      delete_btn.onclick = function () {
-        delete_btn.parentElement.parentElement.remove();
+    let pen = document.querySelector(".pen_btn");
+    pen.onclick = function () {
+      let row = pen.parentNode.parentNode;
+      let tds = row.querySelectorAll("td");
+      for (let i = 0; i < 5; i++) {
+        let input_tag = tds[i].querySelector("input");
+        let span_tag = tds[i].querySelector("span");
+        input_tag.value = span_tag.innerText;
+
+        // span_tag.replaceWith(input_tag);
+        span_tag.style.display = "none";
+        input_tag.style.display = "inline";
+      }
+
+      //---------------------------------
+      let trash_icon = row.querySelector(".fas.fa-trash");
+      // tao ra the i moi icon X
+      let x_icon = row.querySelector(".fas.fa-times");
+      // trash_icon.replaceWith(x_icon);
+      trash_icon.style.display = "none";
+      x_icon.style.display = "block";
+      //---------------------------------
+      let pen_icon = row.querySelector(".fas.fa-pen");
+      let check_icon = row.querySelector(".fas.fa-check");
+      // pen_icon.replaceWith(check_icon);
+      pen_icon.style.display = "none";
+      check_icon.style.display = "block";
+
+      x_icon.onclick = function () {
+        for (let i = 0; i < 5; i++) {
+          tds[i].querySelector("span").style.display = "inline";
+          tds[i].querySelector("input").style.display = "none";
+        }
+        trash_icon.style.display = "block";
+        x_icon.style.display = "none";
+
+        pen_icon.style.display = "block";
+        check_icon.style.display = "none";
       };
-    }
+
+      check_icon.onclick = function () {
+        for (let i = 0; i < 5; i++) {
+          tds[i].querySelector("span").style.display = "inline";
+          tds[i].querySelector("input").style.display = "none";
+        }
+        trash_icon.style.display = "block";
+        x_icon.style.display = "none";
+
+        pen_icon.style.display = "block";
+        check_icon.style.display = "none";
+      };
+    };
+
     let plus_icon = document.getElementById("plus_icon");
     plus_icon.onclick = function () {
       let new_row = document.createElement("tr");
@@ -113,10 +142,24 @@
             <i class="fas fa-trash"></i>
           </div>
         </td>
+        <td>
+          <div class="pen_btn">
+            <i class="fas fa-pen"></i>
+          </div>
+        </td>
       </tr>
       `;
       new_row.querySelector(".delete_btn").onclick = function () {
-        new_row.remove();
+        let form = document.querySelector(".form");
+        form.classList.remove("hidden");
+        document.querySelector("#yes_btn").onclick = function () {
+          new_row.remove();
+          form.classList.add("hidden");
+        };
+
+        document.querySelector("#no_btn").onclick = function () {
+          form.classList.add("hidden");
+        };
       };
       document.querySelector("table tbody").appendChild(new_row);
     };

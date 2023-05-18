@@ -684,3 +684,81 @@ body{
     font-size: 48px;
     color: #fff;
 }
+.step_icons .step:nth-child(2) .step_icon{
+    background-color: rgba(255, 187, 0, 0.787) !important;
+}
+.step_icons .step:nth-child(3) .step_icon{
+    
+    background-color: rgba(60, 255, 0, 0.803) !important;
+}
+.step_icons .step:nth-child(4) .step_icon{
+    background-color: rgba(0, 187, 255, 0.787) !important;
+}
+.step{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.step_content h5{
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 20px 0 0 0; 
+}
+.step_content p{
+    color: #70c15c;
+    font-size: 12px;
+    text-align: center;
+}
+/* CSS main 8 */
+.sign_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sign_form .sign_input{
+    display: flex;
+    color: #88c442;
+    font-size: 48px;
+}
+.sign_input p{
+    margin-bottom: 0;
+}
+.sign_input p:first-child{
+    color: #000000 !important;
+    margin-right: 16px;
+}
+.sign_note{
+    font-size: 20px;
+}
+.sign_note span{
+    color: #88c442 !important;
+}
+/* CSS footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 52px auto;
+}
+.footer_content{
+    display: flex;
+    width: 354px;
+    justify-content: center;
+    align-items: center;
+}
+.footer_logo i{
+    font-size: 32px;
+}
+.footer_infor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer_infor h6{
+    font-size: 20px;
+    margin: 20px 0 0 0;
+}
